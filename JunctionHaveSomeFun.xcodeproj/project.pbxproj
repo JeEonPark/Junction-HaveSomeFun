@@ -20,6 +20,7 @@
 		DB53D8B52C67B7D400891E1E /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B42C67B7D400891E1E /* FilterView.swift */; };
 		DB53D8B72C67B93000891E1E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B62C67B93000891E1E /* SearchView.swift */; };
 		DB53D8B92C67BF3B00891E1E /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B82C67BF3B00891E1E /* SliderView.swift */; };
+		2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0082C67B52E00C2C55C /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DB53D8B42C67B7D400891E1E /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		DB53D8B62C67B93000891E1E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DB53D8B82C67BF3B00891E1E /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		2A96F0082C67B52E00C2C55C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				DB196F6F2C67EF4700A79371 /* Extenstion */,
+				2A96F0072C67B4E500C2C55C /* Extensions */,
 				2A96F0042C67970100C2C55C /* Systems */,
 				2A96EFFC2C6766DE00C2C55C /* Managers */,
 				2A96F0002C6794C800C2C55C /* Models */,
@@ -144,6 +147,12 @@
 				DB196F6D2C67ECA400A79371 /* FilterToggleButton.swift */,
 			);
 			path = Components;
+		2A96F0072C67B4E500C2C55C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A96F0082C67B52E00C2C55C /* Color+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +233,7 @@
 				2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */,
 				DB53D8B32C67B42600891E1E /* MapView.swift in Sources */,
 				DB53D8B92C67BF3B00891E1E /* SliderView.swift in Sources */,
+				2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */,
 				2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */,
 				DB53D8B72C67B93000891E1E /* SearchView.swift in Sources */,
 				2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */,

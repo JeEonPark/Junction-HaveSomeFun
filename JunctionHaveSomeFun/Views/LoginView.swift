@@ -11,16 +11,42 @@ struct LoginView: View {
     @State var idTextField = ""
     
     var body: some View {
-        HStack {
-            Color.clear
-            VStack {
-                TextField("아이디", text: $idTextField)
-                    .frame(height: 40)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .textFieldStyle(.plain)
-                TextField("비밀번호", text: $idTextField)
+        HStack (spacing: 0) {
+            Color(hexColor: "D9D9D9")
+                .frame(width: .infinity, height: .infinity)
+                .ignoresSafeArea()
+            ZStack {
+                Color.white
+                VStack (spacing: 0) {
+                    TextField("", text: $idTextField, prompt: Text("ID").foregroundColor(.black))
+                        .frame(width: 300, height: 34)
+                        .padding()
+                        .background(Color(hexColor: "D9D9D9"))
+                        .textFieldStyle(.plain)
+                        .padding(.bottom, 20)
+                    TextField("", text: $idTextField, prompt: Text("Password").foregroundColor(.black))
+                        .frame(width: 300, height: 34)
+                        .padding()
+                        .background(Color(hexColor: "D9D9D9"))
+                        .textFieldStyle(.plain)
+                        .padding(.bottom, 60)
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Login")
+                            .foregroundColor(.black)
+                            .frame(width: 300, height: 34)
+                            .padding()
+                            .background(Color(hexColor: "D9D9D9"))
+                    })
+                    .padding(.bottom, 70)
+                    Button(action: {
+                        // do sth
+                    }, label: {
+                        Text("Sign up")
+                            .foregroundColor(.black)
+                    })
+                }
             }
         }
     }
@@ -28,5 +54,4 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .frame(width: 800, height: 600)
 }
