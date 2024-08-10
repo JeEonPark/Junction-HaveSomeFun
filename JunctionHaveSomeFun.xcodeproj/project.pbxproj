@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0EC8692C67F7BD001E7615 /* FilterToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8642C67F7BC001E7615 /* FilterToggleButton.swift */; };
+		2A0EC86A2C67F7BD001E7615 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8652C67F7BC001E7615 /* FilterView.swift */; };
+		2A0EC86B2C67F7BD001E7615 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8662C67F7BC001E7615 /* SearchView.swift */; };
+		2A0EC86C2C67F7BD001E7615 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8672C67F7BC001E7615 /* SliderView.swift */; };
+		2A0EC86E2C67F7C2001E7615 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC86D2C67F7C2001E7615 /* MapView.swift */; };
+		2A0EC8712C67F7D2001E7615 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC86F2C67F7D2001E7615 /* View.swift */; };
 		2A96EFCF2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFCE2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift */; };
 		2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFD02C66F90200C2C55C /* ContentView.swift */; };
 		2A96EFD32C66F90300C2C55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A96EFD22C66F90300C2C55C /* Assets.xcassets */; };
@@ -14,16 +20,16 @@
 		2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFFD2C6766E700C2C55C /* ServerManager.swift */; };
 		2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0012C67956700C2C55C /* InformationOfLocation.swift */; };
 		2A96F0062C67994E00C2C55C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0052C67994E00C2C55C /* LoginView.swift */; };
-		DB196F6E2C67ECA400A79371 /* FilterToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB196F6D2C67ECA400A79371 /* FilterToggleButton.swift */; };
-		DB196F712C67EF5B00A79371 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB196F702C67EF5B00A79371 /* View.swift */; };
-		DB53D8B32C67B42600891E1E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B22C67B42600891E1E /* MapView.swift */; };
-		DB53D8B52C67B7D400891E1E /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B42C67B7D400891E1E /* FilterView.swift */; };
-		DB53D8B72C67B93000891E1E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B62C67B93000891E1E /* SearchView.swift */; };
-		DB53D8B92C67BF3B00891E1E /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53D8B82C67BF3B00891E1E /* SliderView.swift */; };
 		2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0082C67B52E00C2C55C /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0EC8642C67F7BC001E7615 /* FilterToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterToggleButton.swift; sourceTree = "<group>"; };
+		2A0EC8652C67F7BC001E7615 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		2A0EC8662C67F7BC001E7615 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2A0EC8672C67F7BC001E7615 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		2A0EC86D2C67F7C2001E7615 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		2A0EC86F2C67F7D2001E7615 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		2A96EFCB2C66F90200C2C55C /* JunctionHaveSomeFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JunctionHaveSomeFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A96EFCE2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunctionHaveSomeFunApp.swift; sourceTree = "<group>"; };
 		2A96EFD02C66F90200C2C55C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,12 +40,6 @@
 		2A96EFFF2C676DAA00C2C55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A96F0012C67956700C2C55C /* InformationOfLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationOfLocation.swift; sourceTree = "<group>"; };
 		2A96F0052C67994E00C2C55C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		DB196F6D2C67ECA400A79371 /* FilterToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterToggleButton.swift; sourceTree = "<group>"; };
-		DB196F702C67EF5B00A79371 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		DB53D8B22C67B42600891E1E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		DB53D8B42C67B7D400891E1E /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		DB53D8B62C67B93000891E1E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		DB53D8B82C67BF3B00891E1E /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		2A96F0082C67B52E00C2C55C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +54,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0EC8682C67F7BC001E7615 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2A0EC8642C67F7BC001E7615 /* FilterToggleButton.swift */,
+				2A0EC8652C67F7BC001E7615 /* FilterView.swift */,
+				2A0EC8662C67F7BC001E7615 /* SearchView.swift */,
+				2A0EC8672C67F7BC001E7615 /* SliderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2A0EC8702C67F7D2001E7615 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				2A0EC86F2C67F7D2001E7615 /* View.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
 		2A96EFC22C66F90200C2C55C = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +92,7 @@
 		2A96EFCD2C66F90200C2C55C /* JunctionHaveSomeFun */ = {
 			isa = PBXGroup;
 			children = (
-				DB196F6F2C67EF4700A79371 /* Extenstion */,
+				2A0EC8702C67F7D2001E7615 /* Extenstion */,
 				2A96F0072C67B4E500C2C55C /* Extensions */,
 				2A96F0042C67970100C2C55C /* Systems */,
 				2A96EFFC2C6766DE00C2C55C /* Managers */,
@@ -114,9 +133,9 @@
 		2A96F0032C6796F500C2C55C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A0EC8682C67F7BC001E7615 /* Components */,
 				2A96F0052C67994E00C2C55C /* LoginView.swift */,
-				DB53D8B22C67B42600891E1E /* MapView.swift */,
-				DB53D8BA2C67DC7D00891E1E /* Components */,
+				2A0EC86D2C67F7C2001E7615 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,23 +149,6 @@
 			path = Systems;
 			sourceTree = "<group>";
 		};
-		DB196F6F2C67EF4700A79371 /* Extenstion */ = {
-			isa = PBXGroup;
-			children = (
-				DB196F702C67EF5B00A79371 /* View.swift */,
-			);
-			path = Extenstion;
-			sourceTree = "<group>";
-		};
-		DB53D8BA2C67DC7D00891E1E /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				DB53D8B42C67B7D400891E1E /* FilterView.swift */,
-				DB53D8B62C67B93000891E1E /* SearchView.swift */,
-				DB53D8B82C67BF3B00891E1E /* SliderView.swift */,
-				DB196F6D2C67ECA400A79371 /* FilterToggleButton.swift */,
-			);
-			path = Components;
 		2A96F0072C67B4E500C2C55C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,18 +231,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB53D8B52C67B7D400891E1E /* FilterView.swift in Sources */,
 				2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */,
-				DB53D8B32C67B42600891E1E /* MapView.swift in Sources */,
-				DB53D8B92C67BF3B00891E1E /* SliderView.swift in Sources */,
+				2A0EC86B2C67F7BD001E7615 /* SearchView.swift in Sources */,
 				2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */,
+				2A0EC86E2C67F7C2001E7615 /* MapView.swift in Sources */,
 				2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */,
-				DB53D8B72C67B93000891E1E /* SearchView.swift in Sources */,
 				2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */,
-				DB196F6E2C67ECA400A79371 /* FilterToggleButton.swift in Sources */,
+				2A0EC86A2C67F7BD001E7615 /* FilterView.swift in Sources */,
 				2A96F0062C67994E00C2C55C /* LoginView.swift in Sources */,
-				DB196F712C67EF5B00A79371 /* View.swift in Sources */,
+				2A0EC8712C67F7D2001E7615 /* View.swift in Sources */,
+				2A0EC8692C67F7BD001E7615 /* FilterToggleButton.swift in Sources */,
 				2A96EFCF2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift in Sources */,
+				2A0EC86C2C67F7BD001E7615 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JunctionHaveSomeFun/Preview Content\"";
-				DEVELOPMENT_TEAM = 7N5SF9X987;
+				DEVELOPMENT_TEAM = X3V79774F4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -389,7 +391,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.devjonny.JunctionHaveSomeFun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JunctionHaveSomeFun/Preview Content\"";
-				DEVELOPMENT_TEAM = 7N5SF9X987;
+				DEVELOPMENT_TEAM = X3V79774F4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -429,7 +431,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.devjonny.JunctionHaveSomeFun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
