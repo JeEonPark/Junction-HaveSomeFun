@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var helloWorldMessage: String = ""
+    @State private var errorMessage: String?
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +19,19 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            let serverManager = ServerManager()
+            serverManager.fetchHelloWorld { result in
+                switch result {
+                case .success(let message):
+                    helloWorldMessage = message
+                    print(message)
+                case .failure(let error):
+                    errorMessage = error.localizedDescription
+                    print(error)
+                }
+            }
+        }
     }
 }
 
