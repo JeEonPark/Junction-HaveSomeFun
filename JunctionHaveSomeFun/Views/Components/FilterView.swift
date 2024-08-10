@@ -33,7 +33,60 @@ struct FilterView: View {
                         .weight(.semibold)
                 )
                 .foregroundColor(.black)
-                .padding(EdgeInsets(top: 22, leading: 23, bottom: 0, trailing: 8))
+                .padding(EdgeInsets(top: 22, leading: 23, bottom: 15.5, trailing: 8))
+            
+            HStack(spacing: 0) {
+                Spacer()
+                
+                Button(action: {
+                    recommendSetting.toggle()
+                }, label: {
+                    if recommendSetting == false {
+                        Text("Recommended Settings by Industry")
+                            .font(Font.custom("SF Pro", size: 14))
+                            .foregroundColor(.black)
+                        
+                        Image(systemName: "square")
+                            .resizable()
+                            .frame(width: 14, height: 14)
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    } else {
+                        Text("Recommended Settings by Industry")
+                            .font(Font.custom("SF Pro", size: 14))
+                            .foregroundColor(.mainBlue)
+                        
+                        Image(systemName: "checkmark.square.fill")
+                            .resizable()
+                            .frame(width: 14, height: 14)
+                            .foregroundColor(.mainBlue)
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    }
+                })
+                
+                Spacer()
+            }
+            
+            Button(action: {
+//                lightingNotSet.toggle()
+            }, label: {
+                Text("No Selection")
+                    .font(Font.custom("SF Pro", size: 16))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color(red: 0, green: 0.39, blue: 0.86))
+                    .frame(maxWidth: .infinity, alignment: .top)
+            })
+            .frame(width: 280, height: 50, alignment: .center)
+            .background(Color.clear)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .inset(by: 0.5)
+                    .stroke(Color(red: 0, green: 0.39, blue: 0.86), lineWidth: 1))
+            .padding(EdgeInsets(top: 11.5, leading: 24, bottom: 26, trailing: 24))
+            
+            Divider()
+                .padding(.horizontal, 20)
             
             //Time
             HStack(spacing: 0) {
@@ -46,11 +99,11 @@ struct FilterView: View {
                 Text("*")
                     .font(Font.custom("SF Pro", size: 20))
                     .foregroundColor(Color(red: 1, green: 0.38, blue: 0.25))
-            }                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
-                .padding(EdgeInsets(top: 27.5, leading: 25, bottom: 0, trailing: 8))
+            }                 
+                .padding(EdgeInsets(top: 39, leading: 25, bottom: 0, trailing: 8))
             
             Button(action: {
-                timePopover.toggle()
+//                timePopover.toggle()
             }, label: {
                 Text("Select a time")
                     .font(Font.custom("SF Pro", size: 16))
@@ -234,55 +287,7 @@ struct FilterView: View {
             
             Spacer()
             
-            HStack(spacing: 0) {
-                Spacer()
-                
-                Button(action: {
-                    recommendSetting.toggle()
-                }, label: {
-                    if recommendSetting == false {
-                        Text("Recommended Settings by Industry")
-                            .font(Font.custom("SF Pro", size: 14))
-                            .foregroundColor(.black)
-                        
-                        Image(systemName: "square")
-                            .resizable()
-                            .frame(width: 14, height: 14)
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    } else {
-                        Text("Recommended Settings by Industry")
-                            .font(Font.custom("SF Pro", size: 14))
-                            .foregroundColor(.mainBlue)
-                        
-                        Image(systemName: "checkmark.square.fill")
-                            .resizable()
-                            .frame(width: 14, height: 14)
-                            .foregroundColor(.mainBlue)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    }
-                })
-                
-                Spacer()
-            }
             
-            Button(action: {
-                lightingNotSet.toggle()
-            }, label: {
-                Text("No Selection")
-                    .font(Font.custom("SF Pro", size: 16))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 0, green: 0.39, blue: 0.86))
-                    .frame(maxWidth: .infinity, alignment: .top)
-            })
-            .frame(width: 280, height: 50, alignment: .center)
-            .background(Color.clear)
-            .cornerRadius(8)
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .inset(by: 0.5)
-                    .stroke(Color(red: 0, green: 0.39, blue: 0.86), lineWidth: 1))
-            .padding(EdgeInsets(top: 11.5, leading: 24, bottom: 0, trailing: 24))
             
             Button(action: {
                 lightingNotSet.toggle()
