@@ -11,27 +11,28 @@ struct ContentView: View {
     @State private var helloWorldMessage: String = ""
     @State private var errorMessage: String?
     
+    @State private var isLoggedIn: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if !isLoggedIn {
+            LoginView(isLoggedIn: $isLoggedIn)
+        } else {
+            MapView()
+//                .onAppear {
+//                    let serverManager = ServerManager()
+//                    serverManager.fetchLocationInfo(latitude: 35.9176540374756, longitude: 129.353885650635) { result in
+//                        switch result {
+//                        case .success(let message):
+//                            helloWorldMessage = message
+//                            print(message)
+//                        case .failure(let error):
+//                            errorMessage = error.localizedDescription
+//                            print(error)
+//                        }
+//                    }
+//                }
         }
-        .padding()
-        .onAppear {
-            let serverManager = ServerManager()
-            serverManager.fetchLocationInfo(latitude: 35.9176540374756, longitude: 129.353885650635) { result in
-                switch result {
-                case .success(let message):
-                    helloWorldMessage = message
-                    print(message)
-                case .failure(let error):
-                    errorMessage = error.localizedDescription
-                    print(error)
-                }
-            }
-        }
+        
     }
 }
 

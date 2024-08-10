@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    @ObservedObject var mapViewModel: MapViewModel = MapViewModel()
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5666791, longitude: 126.9782914), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     
     var body: some View {
@@ -48,6 +49,13 @@ struct MapView: View {
                 
             }.frame(width: geometry.size.width, height: geometry.size.height)
                 .ignoresSafeArea()
+        }
+        .task {
+//            await mapViewModel.fetchLocationInfo(time: 2, minPopulation: 0, maxPopulation: 0, minLux: 0, maxLux: 0, minDecibel: 0, maxDecibel: 0)
+//            print(mapViewModel.mappingGeohashes)
+//
+            await mapViewModel.fetchSpotInfoAverage(latitude: 35.9518146514893, longitude: 129.366588592529, time: 5)
+            print(mapViewModel.floatingPopulation ?? "")
         }
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var isLoggedIn: Bool
+    
     @State var idTextField = ""
     
     var body: some View {
@@ -31,7 +33,7 @@ struct LoginView: View {
                         .textFieldStyle(.plain)
                         .padding(.bottom, 60)
                     Button(action: {
-                        
+                        isLoggedIn = true
                     }, label: {
                         Text("Login")
                             .foregroundColor(.black)
@@ -52,6 +54,6 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    LoginView()
+//}

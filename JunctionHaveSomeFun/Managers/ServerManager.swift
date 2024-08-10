@@ -6,51 +6,20 @@
 //
 
 import Foundation
-import Combine
 
 class ServerManager {
-    func fetchHelloWorld(completion: @escaping (Result<String, Error>) -> Void) {
-        guard let url = URL(string: "http://35.202.228.25:8080/api/test") else {
-            completion(.failure(URLError(.badURL)))
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            
-            guard let data = data, let responseString = String(data: data, encoding: .utf8) else {
-                completion(.failure(URLError(.badServerResponse)))
-                                return
-            }
-            
-            completion(.success(responseString))
-        }
-        
-        task.resume()
-    }
-    
-    
     func fetchLocationInfo(
-        latitude: Double,
-        longitude: Double,
-        time: String? = nil,
+        time: Int = 0,
         minPopulation: Int = 0,
         maxPopulation: Int = 0,
         minLux: Int = 0,
         maxLux: Int = 0,
         minDecibel: Int = 0,
-        maxDecibel: Int = 0,
-        completion: @escaping (Result<String, Error>) -> Void
-    ) {
+        maxDecibel: Int = 0
+    ) async -> Result<String, Error> {
         var urlComponents = URLComponents(string: "http://35.202.228.25:8080/api/location/info")
         urlComponents?.queryItems = [
-            URLQueryItem(name: "latitude", value: "\(latitude)"),
-            URLQueryItem(name: "longitude", value: "\(longitude)"),
-            URLQueryItem(name: "time", value: time),
+            URLQueryItem(name: "time", value: "\(time)"),
             URLQueryItem(name: "minPopulation", value: "\(minPopulation)"),
             URLQueryItem(name: "maxPopulation", value: "\(maxPopulation)"),
             URLQueryItem(name: "minLux", value: "\(minLux)"),
@@ -60,28 +29,44 @@ class ServerManager {
         ]
         
         guard let url = urlComponents?.url else {
-            completion(.failure(URLError(.badURL)))
-            return
+            return .failure(URLError(.badURL))
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let responseString = String(data: data, encoding: .utf8) else {
+                return .failure(URLError(.badServerResponse))
             }
-            
-            guard let data = data, let responseString = String(data: data, encoding: .utf8) else {
-                completion(.failure(URLError(.badServerResponse)))
-                return
-            }
-            
-            completion(.success(responseString))
+            return .success(responseString)
+        } catch {
+            return .failure(error)
         }
-        
-        task.resume()
     }
-
-
-
-
+    
+    func fetchSpotInfo(
+        latitude: Double,
+        longitude: Double,
+        time: Int
+    ) async -> Result<String, Error> {
+        var urlComponents = URLComponents(string: "http://35.202.228.25:8080/api/location/spot/info")
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "latitude", value: "\(latitude)"),
+            URLQueryItem(name: "longitude", value: "\(longitude)"),
+            URLQueryItem(name: "time", value: "\(time)")
+        ]
+        
+        guard let url = urlComponents?.url else {
+            return .failure(URLError(.badURL))
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let responseString = String(data: data, encoding: .utf8) else {
+                return .failure(URLError(.badServerResponse))
+            }
+            return .success(responseString)
+        } catch {
+            return .failure(error)
+        }
+    }
 }
