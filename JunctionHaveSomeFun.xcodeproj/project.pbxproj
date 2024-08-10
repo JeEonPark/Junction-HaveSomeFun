@@ -11,6 +11,7 @@
 		2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFD02C66F90200C2C55C /* ContentView.swift */; };
 		2A96EFD32C66F90300C2C55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A96EFD22C66F90300C2C55C /* Assets.xcassets */; };
 		2A96EFD72C66F90300C2C55C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A96EFD62C66F90300C2C55C /* Preview Assets.xcassets */; };
+		2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFFD2C6766E700C2C55C /* ServerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,8 @@
 		2A96EFD22C66F90300C2C55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A96EFD42C66F90300C2C55C /* JunctionHaveSomeFun.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JunctionHaveSomeFun.entitlements; sourceTree = "<group>"; };
 		2A96EFD62C66F90300C2C55C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A96EFFD2C6766E700C2C55C /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		2A96EFFF2C676DAA00C2C55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,8 @@
 		2A96EFCD2C66F90200C2C55C /* JunctionHaveSomeFun */ = {
 			isa = PBXGroup;
 			children = (
+				2A96EFFF2C676DAA00C2C55C /* Info.plist */,
+				2A96EFFC2C6766DE00C2C55C /* Manager */,
 				2A96EFCE2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift */,
 				2A96EFD02C66F90200C2C55C /* ContentView.swift */,
 				2A96EFD22C66F90300C2C55C /* Assets.xcassets */,
@@ -67,6 +72,14 @@
 				2A96EFD62C66F90300C2C55C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2A96EFFC2C6766DE00C2C55C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2A96EFFD2C6766E700C2C55C /* ServerManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +98,8 @@
 			dependencies = (
 			);
 			name = JunctionHaveSomeFun;
+			packageProductDependencies = (
+			);
 			productName = JunctionHaveSomeFun;
 			productReference = 2A96EFCB2C66F90200C2C55C /* JunctionHaveSomeFun.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +128,8 @@
 				Base,
 			);
 			mainGroup = 2A96EFC22C66F90200C2C55C;
+			packageReferences = (
+			);
 			productRefGroup = 2A96EFCC2C66F90200C2C55C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */,
+				2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */,
 				2A96EFCF2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +292,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JunctionHaveSomeFun/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +332,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JunctionHaveSomeFun/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
