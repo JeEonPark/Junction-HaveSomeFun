@@ -21,7 +21,7 @@ struct ContentView: View {
         .padding()
         .onAppear {
             let serverManager = ServerManager()
-            serverManager.fetchHelloWorld { result in
+            serverManager.fetchLocationInfo(latitude: 35.9176540374756, longitude: 129.353885650635) { result in
                 switch result {
                 case .success(let message):
                     helloWorldMessage = message

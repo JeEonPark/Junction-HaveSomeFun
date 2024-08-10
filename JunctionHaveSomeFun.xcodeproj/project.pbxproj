@@ -14,6 +14,7 @@
 		2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFFD2C6766E700C2C55C /* ServerManager.swift */; };
 		2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0012C67956700C2C55C /* InformationOfLocation.swift */; };
 		2A96F0062C67994E00C2C55C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0052C67994E00C2C55C /* LoginView.swift */; };
+		2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96F0082C67B52E00C2C55C /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2A96EFFF2C676DAA00C2C55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A96F0012C67956700C2C55C /* InformationOfLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationOfLocation.swift; sourceTree = "<group>"; };
 		2A96F0052C67994E00C2C55C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2A96F0082C67B52E00C2C55C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		2A96EFCD2C66F90200C2C55C /* JunctionHaveSomeFun */ = {
 			isa = PBXGroup;
 			children = (
+				2A96F0072C67B4E500C2C55C /* Extensions */,
 				2A96F0042C67970100C2C55C /* Systems */,
 				2A96EFFC2C6766DE00C2C55C /* Managers */,
 				2A96F0002C6794C800C2C55C /* Models */,
@@ -110,6 +113,14 @@
 				2A96EFD02C66F90200C2C55C /* ContentView.swift */,
 			);
 			path = Systems;
+			sourceTree = "<group>";
+		};
+		2A96F0072C67B4E500C2C55C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A96F0082C67B52E00C2C55C /* Color+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */,
+				2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */,
 				2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */,
 				2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */,
 				2A96F0062C67994E00C2C55C /* LoginView.swift in Sources */,
