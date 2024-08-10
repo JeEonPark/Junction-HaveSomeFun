@@ -11,7 +11,7 @@ import SwiftUI
 struct JunctionHaveSomeFunApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MapView()
                 .frame(minWidth: 800, minHeight: 600)
         }
     }
