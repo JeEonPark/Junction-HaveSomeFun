@@ -24,7 +24,8 @@ struct FilterView: View {
     @State var noise: Double = 1
     @State var times: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"
     ]
-    //    @State var industry
+    
+    @State var industry: SubCategory? = nil
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
