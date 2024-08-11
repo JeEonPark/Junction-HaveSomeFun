@@ -64,7 +64,7 @@ class CategoryStore: ObservableObject {
 struct CategorySelectionView: View {
     @StateObject private var categoryStore = CategoryStore()
     @State private var selectedCategory: String?
-    
+    @Binding var industry: SubCategory?
     let categories: [String: [String]] = [
         "Food": ["Bar/Pub", "Diner", "Restaurant"],
         "Retail": ["Clothing & Accessories", "Convenience Store", "Maintenance Service"],
@@ -80,7 +80,7 @@ struct CategorySelectionView: View {
         VStack(spacing: 0) {
             Text("Main Category")
                 .font(.headline)
-                .padding(EdgeInsets(top: 12.5, leading: 72, bottom: 12.5, trailing: 72))
+                .padding(.bottom, 10)
             ForEach(Array(categories.keys.sorted()), id: \.self) { category in
                 Button(action: {
                     selectedCategory = category
@@ -89,16 +89,15 @@ struct CategorySelectionView: View {
                     Text(category)
                         .font(Font.custom("Apple SD Gothic Neo", size: 16))
                         .foregroundColor(selectedCategory == category ? .blue : .primary)
-                        .padding(EdgeInsets(top: 12.5, leading: 72, bottom: 12.5, trailing: 72))
                 }
-                .buttonStyle(.plain)
                 .frame(maxWidth: .infinity, minHeight: 44, maxHeight: 44, alignment: .center)
                 .background(.white)
                 .overlay(
                     Rectangle()
                         .inset(by: 0.25)
-                    
                         .stroke(Color(red: 0.7, green: 0.7, blue: 0.7), lineWidth: 0.5)
+                        .frame(maxWidth: 200, minHeight: 44, alignment: .center)
+
                 )
             }
         }
@@ -106,6 +105,7 @@ struct CategorySelectionView: View {
             Image(systemName: "chevron.right")
                 .frame(maxWidth: .infinity, alignment: .topLeading)
                 .padding(.horizontal, 20)
+            
             VStack(spacing: 0) {
                 Text("Subcategory")
                     .font(.headline)
@@ -115,94 +115,27 @@ struct CategorySelectionView: View {
                     ForEach(subcategories, id: \.self) { subcategory in
                         
                         Button(action: {
-                            categoryStore.selectSubCategory(mainCategory: selectedCategory, subCategoryName: subcategory)
+//                            industry = categories[subcategory]
                             
                         }) {
                             Text(subcategory)
                                 .font(Font.custom("Apple SD Gothic Neo", size: 16))
-                                .padding(EdgeInsets(top: 12.5, leading: 72, bottom: 12.5, trailing: 72))
+                                .foregroundStyle(.manInBlack)
                         }
-                        .buttonStyle(.plain)
                         .frame(maxWidth: .infinity, minHeight: 44, maxHeight: 44, alignment: .center)
                         .background(.white)
                         .overlay(
                             Rectangle()
                                 .inset(by: 0.25)
-                            
                                 .stroke(Color(red: 0.7, green: 0.7, blue: 0.7), lineWidth: 0.5)
+                                .frame(maxWidth: 200, minHeight: 44, alignment: .center)
+
                         )
                     }
                 }
             }
-            
-            
-            
-            
-            
-            //        HStack(alignment: .top, spacing: 0) {
-            //            // Main Category List
-            //            VStack(alignment: .leading, spacing: 0) {
-            //                Text("Main Category")
-            //                    .font(.headline)
-            //                    .padding(.bottom, 10)
-            //
-            //                    VStack(alignment: .leading, spacing: 5) {
-            //                        ForEach(Array(categories.keys.sorted()), id: \.self) { category in
-            //                            Button(action: {
-            //                                selectedCategory = category
-            //                            }) {
-            //                                Text(category)
-            //                                    .font(.custom("Apple SD Gothic Neo", size: 16))
-            //                                    .foregroundColor(selectedCategory == category ? .blue : .primary)
-            //                                    .padding(.vertical, 8)
-            //                                    .frame(maxWidth: .infinity, alignment: .leading)
-            //                            }
-            //                            .buttonStyle(PlainButtonStyle())
-            //                        }
-            //                }
-            //            }
-            //            .frame(width: 250)
-            //
-            //            Image(systemName: "chevron.right")
-            //                .frame(width: 30, height: 30)
-            //
-            //            // Subcategory List
-            //            VStack(alignment: .leading, spacing: 0) {
-            //                Text("Subcategory")
-            //                    .font(.headline)
-            //                    .padding(.bottom, 10)
-            //
-            //                    VStack(alignment: .leading, spacing: 5) {
-            //                        if let selectedCategory = selectedCategory,
-            //                           let subcategories = categories[selectedCategory] {
-            //                            ForEach(subcategories, id: \.self) { subcategory in
-            //                                Button(action: {
-            //                                    categoryStore.selectSubCategory(mainCategory: selectedCategory, subCategoryName: subcategory)
-            //                                }) {
-            //                                    Text(subcategory)
-            //                                        .font(.custom("Apple SD Gothic Neo", size: 16))
-            //                                        .foregroundColor(.primary)
-            //                                        .padding(.vertical, 8)
-            //                                        .frame(maxWidth: .infinity, alignment: .leading)
-            //                                }
-            //                                .buttonStyle(PlainButtonStyle())
-            //                            }
-            //                        } else {
-            //                            Text("Please select a main category")
-            //                                .font(.custom("Apple SD Gothic Neo", size: 16))
-            //                                .foregroundColor(.gray)
-            //                                .padding(.vertical, 8)
-            //                        }
-            //                    }
-            //            }
-            //            .frame(width: 250)
-            //        }
-            //        .padding(EdgeInsets(top: 30, leading: 22, bottom: 30, trailing: 22))
-            //        .background(Color.lightGray)
-            //        .navigationTitle("Categories")
-            //        .frame(height: 300)
         }
-        
+        .frame(width: 454, height: 302, alignment: .top)
     }
 }
 

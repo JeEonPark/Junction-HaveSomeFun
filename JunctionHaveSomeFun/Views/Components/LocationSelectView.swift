@@ -7,40 +7,6 @@
 
 import SwiftUI
 
-enum Location {
-    case 구룡포읍
-    case 기계면
-    case 기북면
-    case 대송면
-    case 대이동
-    case 동해면
-    case 두호동
-    case 상대동
-    case 송도동
-    
-    case 송라면
-    case 신광면
-    case 양학동
-    case 연일읍
-    case 오천읍
-    case 용흥동
-    case 우창동
-    case 장기면
-    case 장량동
-    
-    case 제철동
-    case 죽도동
-    case 죽장면
-    case 중앙동
-    case 청림동
-    case 청하면
-    case 해도동
-    case 호미곶면
-    case 환여동
-    case 효곡동
-    case 흥해읍
-}
-
 struct LocationSelectView: View {
     
     @Binding var recommendPopover: Bool
