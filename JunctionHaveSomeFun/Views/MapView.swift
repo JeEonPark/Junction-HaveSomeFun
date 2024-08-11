@@ -54,17 +54,16 @@ struct MapView: View {
             }.frame(width: geometry.size.width, height: geometry.size.height)
                 .ignoresSafeArea()
         }
-        .task {
-            await mapViewModel.fetchLocationInfo(time: 2, minPopulation: 0, maxPopulation: 0, minLux: 0, maxLux: 0, minDecibel: 0, maxDecibel: 0)
-            print(mapViewModel.mappingGeohashes)
-        }
+//        .task {
+//            await mapViewModel.fetchLocationInfo(time: 2, minPopulation: 0, maxPopulation: 0, minLux: 0, maxLux: 0, minDecibel: 0, maxDecibel: 0)
+//            print(mapViewModel.mappingGeohashes)
+//        }
     }
 }
 
 struct GeohashLocation: Identifiable {
     let id = UUID()
     let geohash: String
-    
     var coordinate: CLLocationCoordinate2D {
         if let (latitude, longitude, _, _) = geohash.decodeGeohash() {
             return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

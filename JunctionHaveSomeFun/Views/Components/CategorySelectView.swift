@@ -64,7 +64,6 @@ class CategoryStore: ObservableObject {
 struct CategorySelectionView: View {
     @StateObject private var categoryStore = CategoryStore()
     @State private var selectedCategory: String?
-    @Binding var industry: SubCategory?
     let categories: [String: [String]] = [
         "Food": ["Bar/Pub", "Diner", "Restaurant"],
         "Retail": ["Clothing & Accessories", "Convenience Store", "Maintenance Service"],
@@ -139,6 +138,6 @@ struct CategorySelectionView: View {
     }
 }
 
-#Preview {
-    CategorySelectionView()
-}
+//#Preview {
+////    CategorySelectionView()
+//}
