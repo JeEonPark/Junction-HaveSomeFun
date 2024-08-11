@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FilterView: View {
+    @ObservedObject var mapViewModel: MapViewModel
     
     @State var recommendSetting = false
     @State var recommendPopover = false
@@ -310,7 +311,51 @@ struct FilterView: View {
             Spacer()
             
             Button(action: {
-                lightingNotSet.toggle()
+                Task {
+                    var tempTime = time
+                    var tempMinPopulation = 0
+                    var tempMaxPopulation = 0
+
+                    if population == 0 {
+                        tempMinPopulation = 0
+                        tempMaxPopulation = 19
+                    } else if population == 1 {
+                        tempMinPopulation = 20
+                        tempMaxPopulation = 45
+                    } else if population == 1 {
+                        tempMinPopulation = 46
+                        tempMaxPopulation = 0
+                    }
+                    
+                    var tempMinLighting = 0
+                    var tempMaxLighting = 0
+                    
+                    if lighting == 0 {
+                        tempMinLighting = 0
+                         tempMaxLighting = 50
+                    } else if lighting == 1 {
+                         tempMinLighting = 51
+                         tempMaxLighting = 999
+                    } else if lighting == 2 {
+                         tempMinLighting = 1000
+                         tempMaxLighting = 0
+                    }
+                    
+                    var tempMinNoise = 0
+                    var tempMaxNoise = 0
+                    if noise == 0 {
+                        tempMinNoise = 30
+                        tempMaxNoise = 40
+                    } else if noise == 1 {
+                        tempMinNoise = 41
+                        tempMaxNoise = 59
+                    } else if noise == 2 {
+                        tempMinNoise = 65
+                        tempMaxNoise = 0
+                    }
+                    await mapViewModel.fetchLocationInfo(time: Int(tempTime) ?? 0,
+                                                    minPopulation: tempMinPopulation, maxPopulation: tempMaxPopulation, minLux: tempMinLighting, maxLux: tempMaxLighting, minDecibel: tempMinNoise, maxDecibel: tempMaxNoise)
+                }
             }, label: {
                 Text("Apply")
                     .font(
@@ -340,5 +385,5 @@ struct FilterView: View {
 }
 
 #Preview {
-    FilterView()
+    FilterView(mapViewModel: MapViewModel())
 }

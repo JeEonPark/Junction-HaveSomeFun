@@ -26,7 +26,7 @@ struct MapView: View {
                         SearchView()
                         
                         HStack(alignment: .top, spacing: 0) {
-                            FilterView()
+                            FilterView(mapViewModel: mapViewModel)
                             
                             ZStack() {
                                 Rectangle()
