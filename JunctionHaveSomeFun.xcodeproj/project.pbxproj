@@ -13,6 +13,7 @@
 		2A0EC86C2C67F7BD001E7615 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8672C67F7BC001E7615 /* SliderView.swift */; };
 		2A0EC86E2C67F7C2001E7615 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC86D2C67F7C2001E7615 /* MapView.swift */; };
 		2A0EC8712C67F7D2001E7615 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC86F2C67F7D2001E7615 /* View.swift */; };
+		2A0EC8732C6807C1001E7615 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8722C6807C1001E7615 /* MapViewModel.swift */; };
 		2A96EFCF2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFCE2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift */; };
 		2A96EFD12C66F90200C2C55C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96EFD02C66F90200C2C55C /* ContentView.swift */; };
 		2A96EFD32C66F90300C2C55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A96EFD22C66F90300C2C55C /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		2A0EC8672C67F7BC001E7615 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		2A0EC86D2C67F7C2001E7615 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2A0EC86F2C67F7D2001E7615 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		2A0EC8722C6807C1001E7615 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		2A96EFCB2C66F90200C2C55C /* JunctionHaveSomeFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JunctionHaveSomeFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A96EFCE2C66F90200C2C55C /* JunctionHaveSomeFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunctionHaveSomeFunApp.swift; sourceTree = "<group>"; };
 		2A96EFD02C66F90200C2C55C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				2A96F0052C67994E00C2C55C /* LoginView.swift */,
 				DB196F782C6829FD00A79371 /* MapTest.swift */,
 				2A0EC86D2C67F7C2001E7615 /* MapView.swift */,
+				2A0EC8722C6807C1001E7615 /* MapViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				2A96F0092C67B52E00C2C55C /* Color+Extension.swift in Sources */,
 				2A0EC86E2C67F7C2001E7615 /* MapView.swift in Sources */,
 				DB196F732C6808E500A79371 /* LocationSelectView.swift in Sources */,
+				2A0EC8732C6807C1001E7615 /* MapViewModel.swift in Sources */,
 				2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */,
 				DB196F792C6829FD00A79371 /* MapTest.swift in Sources */,
 				2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */,
