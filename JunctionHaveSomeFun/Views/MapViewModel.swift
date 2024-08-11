@@ -32,7 +32,7 @@ class MapViewModel: ObservableObject {
             if let data = message.data(using: .utf8) {
                 do {
                     let geohashes = try JSONDecoder().decode([String].self, from: data)
-                    self.mappingGeohashes = geohashes
+                    self.mappingGeohashes = Array(Set(geohashes))
                     print(self.mappingGeohashes)
                 } catch {
                     print("Failed to decode JSON: \(error)")
