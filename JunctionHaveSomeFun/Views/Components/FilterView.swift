@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct FilterView: View {
-    //    @State var time =
+    
+    @State var recommendSetting = false
+    @State var recommendPopover = false
+    @State var location = ""
+    
     @State var timePopover = false
     
     @State var population: Double = 1
@@ -19,8 +23,7 @@ struct FilterView: View {
     @State var noiseNotSet = false
     @State var noise: Double = 1
     
-    @State var recommendSetting = false
-    @State var recommendPopover = false
+    
     //    @State var industry
     
     var body: some View {
@@ -68,7 +71,7 @@ struct FilterView: View {
             }
             
             Button(action: {
-//                lightingNotSet.toggle()
+                recommendPopover.toggle()
             }, label: {
                 Text("No Selection")
                     .font(Font.custom("SF Pro", size: 16))
@@ -76,6 +79,7 @@ struct FilterView: View {
                     .foregroundColor(Color(red: 0, green: 0.39, blue: 0.86))
                     .frame(maxWidth: .infinity, alignment: .top)
             })
+            .disabled(!recommendSetting)
             .frame(width: 280, height: 50, alignment: .center)
             .background(Color.clear)
             .cornerRadius(8)
@@ -84,7 +88,11 @@ struct FilterView: View {
                     .inset(by: 0.5)
                     .stroke(Color(red: 0, green: 0.39, blue: 0.86), lineWidth: 1))
             .padding(EdgeInsets(top: 11.5, leading: 24, bottom: 26, trailing: 24))
-            
+            .opacity(recommendSetting ? 1 : 0.3)
+            .popover(isPresented: $recommendPopover, attachmentAnchor: .point(.trailing), arrowEdge: .leading) {
+                CategorySelectionView()
+                    .presentationCompactAdaptation(.popover)
+            }
             Divider()
                 .padding(.horizontal, 20)
             
