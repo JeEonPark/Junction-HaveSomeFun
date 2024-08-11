@@ -61,7 +61,7 @@ struct LocationSelectView: View {
                             .foregroundColor(Color(red: 0.07, green: 0.07, blue: 0.07))
                             .padding(EdgeInsets(top: 12.5, leading: 72, bottom: 12.5, trailing: 72))
                     }
-                    .buttonStyle(.plain)
+//              //      .buttonStyle(.plain)
                     .frame(maxWidth: .infinity, minHeight: 44, maxHeight: 44, alignment: .center)
                     .background(.white)
                     .overlay(
@@ -73,7 +73,7 @@ struct LocationSelectView: View {
                 }
             }
             .padding(EdgeInsets(top: 24, leading: 22, bottom: 24, trailing: 22))
-            .background(Color.lightGray)
+            .background(Color.gray4)
         }
 
     }

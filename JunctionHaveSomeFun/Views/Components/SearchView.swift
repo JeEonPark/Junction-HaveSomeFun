@@ -44,7 +44,6 @@ struct SearchView: View {
         .popover(isPresented: $locationPopover, attachmentAnchor: .point(.center), arrowEdge: .top) {
             LocationSelectView(recommendPopover: $locationPopover, location: $location)
                 .frame(width: 244, height: 466)
-            
         }
     }
 }

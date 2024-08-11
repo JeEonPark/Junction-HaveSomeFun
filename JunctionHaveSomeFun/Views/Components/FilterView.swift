@@ -14,7 +14,7 @@ struct FilterView: View {
     @State var location = ""
     
     @State var timePopover = false
-    
+    @State var time = ""
     @State var population: Double = 1
     
     @State var lightingNotSet = false
@@ -22,8 +22,8 @@ struct FilterView: View {
     
     @State var noiseNotSet = false
     @State var noise: Double = 1
-    
-    
+    @State var times: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"
+    ]
     //    @State var industry
     
     var body: some View {
@@ -109,16 +109,30 @@ struct FilterView: View {
                     .foregroundColor(Color(red: 1, green: 0.38, blue: 0.25))
             }                 
                 .padding(EdgeInsets(top: 39, leading: 25, bottom: 0, trailing: 8))
-            
-            Button(action: {
-//                timePopover.toggle()
-            }, label: {
-                Text("Select a time")
-                    .font(Font.custom("SF Pro", size: 16))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 0, green: 0.39, blue: 0.86))
-                    .frame(maxWidth: .infinity, alignment: .top)
-            })
+            HStack(spacing: 0) {
+//                Picker("Select a time", selection: $time) {
+//                    ForEach(0 ..< times.count) {
+//                                   Text(self.times[$0])
+//                               }
+//                           }
+                
+                Button(action: {
+                    timePopover.toggle()
+                }, label: {
+                    if time == "" {
+                        Text("Select a time")
+                            .font(Font.custom("SF Pro", size: 16))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0, green: 0.39, blue: 0.86))
+                    } else {
+                        Text(time)
+                            .font(Font.custom("SF Pro", size: 16))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0, green: 0.39, blue: 0.86))
+                    }
+                })
+               
+            }
             .frame(width: 280, height: 50, alignment: .center)
             .background(Color.clear)
             .cornerRadius(8)
@@ -126,8 +140,13 @@ struct FilterView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .inset(by: 0.5)
                     .stroke(Color(red: 0, green: 0.39, blue: 0.86), lineWidth: 1))
+            .popover(isPresented: $timePopover, attachmentAnchor: .point(.center), arrowEdge: .top) {
+                
+                
+                TimeSelectView(timePopover: $timePopover, time: $time)
+            }
             .padding(EdgeInsets(top: 8.5, leading: 24, bottom: 0, trailing: 24))
-            
+
             //population
             HStack(spacing: 0) {
                 Text("Floating Population")
@@ -274,7 +293,7 @@ struct FilterView: View {
                             Spacer()
                             Text("Noisy")
                         }
-                        .frame(width: .infinity)
+//                        .frame(width: .infinity)
                         Text("Moderate")
                     }
                     .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
@@ -287,15 +306,8 @@ struct FilterView: View {
                     .opacity(noiseNotSet ? 0.7 : 0)
                     .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             }
-         
-            
-            
-            
-           
             
             Spacer()
-            
-            
             
             Button(action: {
                 lightingNotSet.toggle()

@@ -26,6 +26,7 @@
 		DB196F752C68213200A79371 /* CategorySelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB196F742C68213200A79371 /* CategorySelectView.swift */; };
 		DB196F772C6823E700A79371 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB196F762C6823E700A79371 /* CategoryModel.swift */; };
 		DB196F792C6829FD00A79371 /* MapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB196F782C6829FD00A79371 /* MapTest.swift */; };
+		DB196F7B2C684C3F00A79371 /* TimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB196F7A2C684C3F00A79371 /* TimeSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		DB196F742C68213200A79371 /* CategorySelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectView.swift; sourceTree = "<group>"; };
 		DB196F762C6823E700A79371 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		DB196F782C6829FD00A79371 /* MapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTest.swift; sourceTree = "<group>"; };
+		DB196F7A2C684C3F00A79371 /* TimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				2A0EC8672C67F7BC001E7615 /* SliderView.swift */,
 				DB196F722C6808E500A79371 /* LocationSelectView.swift */,
 				DB196F742C68213200A79371 /* CategorySelectView.swift */,
+				DB196F7A2C684C3F00A79371 /* TimeSelectView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				2A96EFFE2C6766E700C2C55C /* ServerManager.swift in Sources */,
 				DB196F792C6829FD00A79371 /* MapTest.swift in Sources */,
 				2A96F0022C67956700C2C55C /* InformationOfLocation.swift in Sources */,
+				DB196F7B2C684C3F00A79371 /* TimeSelectView.swift in Sources */,
 				2A0EC86A2C67F7BD001E7615 /* FilterView.swift in Sources */,
 				2A96F0062C67994E00C2C55C /* LoginView.swift in Sources */,
 				2A0EC8712C67F7D2001E7615 /* View.swift in Sources */,
